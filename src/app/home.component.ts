@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -7,6 +7,9 @@ import { RouterLink } from '@angular/router';
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
+  @ViewChild('declarationDialog') declarationDialog?: ElementRef<HTMLDialogElement>;
+  @ViewChild('valuesDialog') valuesDialog?: ElementRef<HTMLDialogElement>;
+
   quickLinks = [
     ['assets/iconos/inscripciones.svg', 'Inscripciones', 'Fechas, requisitos y preinscripción'],
     ['assets/iconos/pagos.svg', 'Cuotas', 'Medios e instrucciones de pago'],
@@ -34,4 +37,34 @@ export class HomeComponent {
     ['24', 'SEP', 'Martín Rodríguez', 'Muestra anual de proyectos'],
     ['03', 'OCT', 'Nuestra Señora de Begoña', 'Celebración de la comunidad'],
   ];
+
+  openDeclaration(event: Event): void {
+    event.preventDefault();
+    this.declarationDialog?.nativeElement.showModal();
+  }
+
+  closeDeclaration(): void {
+    this.declarationDialog?.nativeElement.close();
+  }
+
+  closeDeclarationFromBackdrop(event: MouseEvent): void {
+    if (event.target === this.declarationDialog?.nativeElement) {
+      this.closeDeclaration();
+    }
+  }
+
+  openValues(event: Event): void {
+    event.preventDefault();
+    this.valuesDialog?.nativeElement.showModal();
+  }
+
+  closeValues(): void {
+    this.valuesDialog?.nativeElement.close();
+  }
+
+  closeValuesFromBackdrop(event: MouseEvent): void {
+    if (event.target === this.valuesDialog?.nativeElement) {
+      this.closeValues();
+    }
+  }
 }

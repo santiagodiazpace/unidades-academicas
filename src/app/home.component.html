@@ -96,16 +96,32 @@
         </p>
         <ol>
           <li>
-            <b>Educación integral</b
-            ><span>Desarrollamos todas las dimensiones de la persona.</span>
+            <div class="identity-item-heading">
+              <b>Educación integral</b>
+              <a
+                class="identity-more"
+                href="assets/pdf/Gravissimum%20Educationis.pdf"
+                (click)="openDeclaration($event)"
+                aria-haspopup="dialog"
+              >VER MÁS</a>
+            </div>
+            <span>Desarrollamos todas las dimensiones de la persona.</span>
           </li>
           <li>
             <b>Comunidad cercana</b
             ><span>Familias y escuela, construyendo juntos.</span>
           </li>
           <li>
-            <b>Valores que guían</b
-            ><span>Respeto, compromiso, solidaridad y fe.</span>
+            <div class="identity-item-heading">
+              <b>Valores que guían</b>
+              <a
+                class="identity-more"
+                href="assets/pdf/Familiaris%20consortio.pdf"
+                (click)="openValues($event)"
+                aria-haspopup="dialog"
+              >VER MÁS</a>
+            </div>
+            <span>Respeto, compromiso, solidaridad y fe.</span>
           </li>
         </ol>
         <a class="btn dark hero-action" routerLink="/propuesta-institucional"> CONOCER MÁS </a>
@@ -256,4 +272,54 @@
       </div>
     </div>
   </section>
+
+  <dialog
+    #declarationDialog
+    class="declaration-dialog"
+    aria-labelledby="declaration-title"
+    (click)="closeDeclarationFromBackdrop($event)"
+  >
+    <div class="declaration-dialog-panel">
+      <header>
+        <div>
+          <small>EDUCACIÓN INTEGRAL</small>
+          <h2 id="declaration-title">Gravissimum Educationis</h2>
+        </div>
+        <button type="button" (click)="closeDeclaration()" aria-label="Cerrar Gravissimum Educationis">×</button>
+      </header>
+      <iframe
+        src="assets/pdf/Gravissimum%20Educationis.pdf"
+        title="Gravissimum Educationis"
+      ></iframe>
+      <p class="declaration-fallback">
+        Si el documento no se visualiza, podés
+        <a href="assets/pdf/Gravissimum%20Educationis.pdf" target="_blank" rel="noopener">abrir el PDF en otra pestaña</a>.
+      </p>
+    </div>
+  </dialog>
+
+  <dialog
+    #valuesDialog
+    class="declaration-dialog"
+    aria-labelledby="values-document-title"
+    (click)="closeValuesFromBackdrop($event)"
+  >
+    <div class="declaration-dialog-panel">
+      <header>
+        <div>
+          <small>VALORES QUE GUÍAN</small>
+          <h2 id="values-document-title">Familiaris Consortio</h2>
+        </div>
+        <button type="button" (click)="closeValues()" aria-label="Cerrar Familiaris Consortio">×</button>
+      </header>
+      <iframe
+        src="assets/pdf/Familiaris%20consortio.pdf"
+        title="Exhortación Apostólica Familiaris Consortio de Juan Pablo II"
+      ></iframe>
+      <p class="declaration-fallback">
+        Si el documento no se visualiza, podés
+        <a href="assets/pdf/Familiaris%20consortio.pdf" target="_blank" rel="noopener">abrir el PDF en otra pestaña</a>.
+      </p>
+    </div>
+  </dialog>
 </main>
