@@ -92,6 +92,10 @@ app-families + .back-to-top{background:#fff}
 .parish-page{background:#fff}
 .parish-hero{height:620px;position:relative;display:flex;align-items:center;color:#fff;background:url("assets/images/parroquia_begonia.png") center/cover no-repeat}
 .home-hero{background-image:url("assets/images/inicio-hero.png")}
+.home-hero-logos{position:absolute;left:0;bottom:calc(100% + 14px);display:flex;align-items:center;gap:20px}
+.home-hero-logos span{display:grid;place-items:center;width:auto;height:80px}
+.home-hero-logos img{display:block;width:auto;height:80px;object-fit:contain}
+.home-hero-logos span:last-child img{height:70px}
 .home-hero .hero-copy>p{max-width:590px;font-size:17px;line-height:1.7;color:#dce9e4;margin:0 0 31px}
 .home-hero .hero-action{margin-right:14px}
 .home-hero .hero-action:hover{background:#fffdf8}
@@ -146,8 +150,10 @@ app-families + .back-to-top{background:#fff}
 .parish-contact-grid a{transition:color .2s ease}
 .parish-contact-grid a:hover{color:#a77729}
 @media(max-width:800px){.parish-hero{height:560px}.parish-hero h1{font-size:48px}.martin-hero-logo{top:14px;right:28px;width:72px;height:72px;padding:11px;box-shadow:0 0 0 6px #1d40382e,0 8px 20px #0b241e66;transform:none}.parish-intro-grid,.parish-schedule-grid{grid-template-columns:1fr;gap:42px}.parish-card-grid{grid-template-columns:1fr}.parish-card-grid article{border-right:0;border-bottom:1px solid #ffffff2b}.parish-card-grid article:last-child{border-bottom:0}}
+@media(max-width:800px){.home-hero-logos{bottom:calc(100% - 2px);gap:20px}.home-hero-logos span{width:auto;height:80px}}
 @media(max-width:700px){.parish-contact-grid{grid-template-columns:1fr}.parish-contact-grid article{border-right:0;border-bottom:1px solid var(--line)}.parish-contact-grid article:last-child{border-bottom:0}}
 @media(max-width:600px){.parish-hero{height:520px}.parish-hero h1{font-size:40px}.parish-back{margin-bottom:48px}.parish-intro h2,.parish-section-heading h2,.parish-schedule h2,.parish-contact h2{font-size:36px}}
+@media(max-width:600px){.home-hero{height:585px}.home-hero-logos{position:relative;top:-8px;display:block!important;width:100%;margin:0 0 24px;white-space:nowrap;font-size:0;text-align:center}.home-hero-logos span{display:inline-grid!important;width:46px;height:46px;margin-right:5px;place-items:center;vertical-align:middle}.home-hero-logos span:last-child{margin-right:0}.home-hero-logos img{width:100%;max-width:46px;height:46px}.home-hero-logos span:last-child img{height:40px}.home-hero .hero-copy>p{font-size:15px;line-height:1.55}.home-hero .hero-action{margin-right:8px;margin-bottom:8px}}
 
 .school-detail-page{background:#fff}
 .school-detail-hero{min-height:510px;position:relative;overflow:hidden;display:flex;align-items:center;background:var(--green);color:#fff}
