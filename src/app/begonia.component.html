@@ -60,10 +60,15 @@
             <span><img class="school-level-contact-icon" src="assets/iconos/whatsapp.svg" alt="" aria-hidden="true" />(0249) 000-2001</span>
             <span><i aria-hidden="true">⌖</i>Sáenz Peña 742 - PA - Tandil</span>
             <span><i aria-hidden="true">✉</i>guarderia&#64;colegio.edu.ar</span>
-            <span class="school-gallery" aria-label="Ver fotos">
+            <button
+              type="button"
+              class="school-gallery"
+              aria-label="Ver fotos de Guardería Virgen de Begoña"
+              (click)="openGallery(guarderiaPhotos, 'Guardería Virgen de Begoña')"
+            >
               <img class="school-gallery-icon" src="assets/iconos/fotos.svg" alt="" aria-hidden="true" />
               <span class="school-gallery-label" aria-hidden="true">Ver fotos</span>
-            </span>
+            </button>
           </div>
         </article>
         <article>
@@ -75,10 +80,15 @@
             <span><img class="school-level-contact-icon" src="assets/iconos/whatsapp.svg" alt="" aria-hidden="true" />(0249) 000-2002</span>
             <span><i aria-hidden="true">⌖</i>Sáenz Peña 742 - PB - Tandil</span>
             <span><i aria-hidden="true">✉</i>inicial.begonia&#64;colegio.edu.ar</span>
-            <span class="school-gallery" aria-label="Ver fotos">
+            <button
+              type="button"
+              class="school-gallery"
+              aria-label="Ver fotos de Jardín Virgen de Begoña"
+              (click)="openGallery(guarderiaPhotos, 'Jardín Virgen de Begoña')"
+            >
               <img class="school-gallery-icon" src="assets/iconos/fotos.svg" alt="" aria-hidden="true" />
               <span class="school-gallery-label" aria-hidden="true">Ver fotos</span>
-            </span>
+            </button>
           </div>
         </article>
         <article>
@@ -90,10 +100,15 @@
             <span><img class="school-level-contact-icon" src="assets/iconos/whatsapp.svg" alt="" aria-hidden="true" />(0249) 000-2003</span>
             <span><i aria-hidden="true">⌖</i>Sáenz Peña 751 - Tandil</span>
             <span><i aria-hidden="true">✉</i>primaria.begonia&#64;colegio.edu.ar</span>
-            <span class="school-gallery" aria-label="Ver fotos">
+            <button
+              type="button"
+              class="school-gallery"
+              aria-label="Ver fotos de Nivel Primario"
+              (click)="openGallery(primariaBegoniaPhotos, 'Colegio Nuestra Señora de Begoña - Nivel Primario')"
+            >
               <img class="school-gallery-icon" src="assets/iconos/fotos.svg" alt="" aria-hidden="true" />
               <span class="school-gallery-label" aria-hidden="true">Ver fotos</span>
-            </span>
+            </button>
           </div>
         </article>
         <article>
@@ -105,10 +120,15 @@
             <span><img class="school-level-contact-icon" src="assets/iconos/whatsapp.svg" alt="" aria-hidden="true" />(0249) 000-2004</span>
             <span><i aria-hidden="true">⌖</i>Sáenz Peña 751 - Tandil</span>
             <span><i aria-hidden="true">✉</i>secundaria.begonia&#64;colegio.edu.ar</span>
-            <span class="school-gallery" aria-label="Ver fotos">
+            <button
+              type="button"
+              class="school-gallery"
+              aria-label="Ver fotos de Nivel Secundario"
+              (click)="openGallery(primariaBegoniaPhotos, 'Colegio Nuestra Señora de Begoña - Nivel Secundario')"
+            >
               <img class="school-gallery-icon" src="assets/iconos/fotos.svg" alt="" aria-hidden="true" />
               <span class="school-gallery-label" aria-hidden="true">Ver fotos</span>
-            </span>
+            </button>
           </div>
         </article>
       </div>
@@ -121,6 +141,51 @@
       </div>
     </div>
   </section>
+
+  @if (isGalleryOpen) {
+    <div
+      class="photo-carousel-backdrop"
+      role="dialog"
+      aria-modal="true"
+      [attr.aria-label]="'Fotos de ' + activeGalleryTitle"
+      (click)="closeGallery()"
+    >
+      <div class="photo-carousel" (click)="$event.stopPropagation()">
+        <button
+          type="button"
+          class="photo-carousel-close"
+          aria-label="Cerrar galería"
+          (click)="closeGallery()"
+        >
+          ×
+        </button>
+        <button
+          type="button"
+          class="photo-carousel-arrow photo-carousel-arrow-left"
+          aria-label="Foto anterior"
+          (click)="previousPhoto()"
+        >
+          ‹
+        </button>
+        <img
+          class="photo-carousel-image"
+          [src]="activeGalleryPhotos[currentPhotoIndex]"
+          [alt]="activeGalleryTitle + ', foto ' + (currentPhotoIndex + 1)"
+        />
+        <button
+          type="button"
+          class="photo-carousel-arrow photo-carousel-arrow-right"
+          aria-label="Foto siguiente"
+          (click)="nextPhoto()"
+        >
+          ›
+        </button>
+        <div class="photo-carousel-status" aria-live="polite">
+          {{ currentPhotoIndex + 1 }} / {{ activeGalleryPhotos.length }}
+        </div>
+      </div>
+    </div>
+  }
 
   <section class="section school-pillars">
     <div class="shell school-pillars-grid">

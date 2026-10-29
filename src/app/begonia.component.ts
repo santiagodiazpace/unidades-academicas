@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 declare const L: any;
@@ -10,6 +10,19 @@ declare const L: any;
 })
 export class BegoniaComponent implements AfterViewInit, OnDestroy {
   @ViewChild('campusMap') campusMap?: ElementRef<HTMLElement>;
+
+  readonly guarderiaPhotos = [
+    'assets/images/guarderia_1.png',
+    'assets/images/guarderia_2.png',
+  ];
+  readonly primariaBegoniaPhotos = [
+    'assets/images/begonia_1.png',
+    'assets/images/begonia_2.png',
+  ];
+  activeGalleryPhotos: readonly string[] = [];
+  activeGalleryTitle = '';
+  isGalleryOpen = false;
+  currentPhotoIndex = 0;
 
   private map?: any;
   private readonly initializeOnLoad = () => this.initializeMap();
@@ -26,6 +39,43 @@ export class BegoniaComponent implements AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
     window.removeEventListener('load', this.initializeOnLoad);
     this.map?.remove();
+  }
+
+  openGallery(photos: readonly string[], title: string): void {
+    this.activeGalleryPhotos = photos;
+    this.activeGalleryTitle = title;
+    this.currentPhotoIndex = 0;
+    this.isGalleryOpen = true;
+  }
+
+  closeGallery(): void {
+    this.isGalleryOpen = false;
+  }
+
+  previousPhoto(): void {
+    this.currentPhotoIndex =
+      (this.currentPhotoIndex - 1 + this.activeGalleryPhotos.length) %
+      this.activeGalleryPhotos.length;
+  }
+
+  nextPhoto(): void {
+    this.currentPhotoIndex =
+      (this.currentPhotoIndex + 1) % this.activeGalleryPhotos.length;
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleGalleryKeyboard(event: KeyboardEvent): void {
+    if (!this.isGalleryOpen) {
+      return;
+    }
+
+    if (event.key === 'Escape') {
+      this.closeGallery();
+    } else if (event.key === 'ArrowLeft') {
+      this.previousPhoto();
+    } else if (event.key === 'ArrowRight') {
+      this.nextPhoto();
+    }
   }
 
   private initializeMap(): void {

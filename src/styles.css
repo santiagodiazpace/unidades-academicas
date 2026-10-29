@@ -194,7 +194,7 @@ app-families + .back-to-top{background:#fff}
 .school-level-contact-icon{width:14px;height:14px;flex:0 0 14px;object-fit:contain}
 .martin-page .school-level-contact{padding-right:64px}
 .begonia-page .school-level-contact{position:relative;padding-right:64px}
-.begonia-page .school-level-contact>.school-gallery{position:absolute;right:0;bottom:-15px;display:block;width:48px;height:48px;margin:0;border:0;border-radius:0}
+.begonia-page .school-level-contact>.school-gallery{position:absolute;right:0;bottom:-15px;display:block;width:48px;height:48px;margin:0;padding:0;border:0;border-radius:0;background:transparent;cursor:pointer}
 .school-level-card-grid article>.school-gallery{position:absolute;right:34px;bottom:20px;display:block;width:48px;height:48px;margin:0;padding:0;border:0;border-radius:0;background:transparent;cursor:pointer}
 .school-gallery-icon{display:block;width:48px;height:48px;object-fit:contain;transition:transform .2s ease}
 .school-gallery-label{position:absolute;right:50%;bottom:calc(100% + 8px);padding:6px 9px;border-radius:3px;background:#fff;color:var(--ink);box-shadow:0 5px 14px #0b241e66;font-size:11px;font-weight:700;line-height:1;opacity:0;pointer-events:none;white-space:nowrap;transform:translate(50%,4px);transition:opacity .2s ease,transform .2s ease}
