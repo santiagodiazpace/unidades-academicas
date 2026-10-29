@@ -12,8 +12,16 @@
         </p>
       </div>
     </div>
-    <div class="martin-hero-logo">
-      <img src="assets/logos/inst-mar-rodriguez-logo.png" alt="Instituto Martín Rodríguez" />
+    <div class="martin-hero-logos" aria-label="Instituciones de la Unidad Académica Martín Rodríguez">
+      <div class="martin-hero-logo">
+        <img src="assets/logos/inst-mar-rodriguez-logo.png" alt="Instituto Martín Rodríguez" />
+      </div>
+      <div class="martin-hero-logo">
+        <img src="assets/logos/escuela_m_rodriguez.png" alt="Escuela Brigadier General Martín Rodríguez" />
+      </div>
+      <div class="martin-hero-logo">
+        <img src="assets/logos/santa_cecilia.png" alt="Jardín Santa Cecilia" />
+      </div>
     </div>
   </section>
 
@@ -51,9 +59,9 @@
         <article>
           <img class="school-level-icon" src="assets/iconos/jardin.png" alt="" aria-hidden="true" />
           <small>NIVEL INICIAL</small>
-          <h3>Descubrir y compartir</h3>
+          <h3>Jardín Santa Cecilia</h3>
           <p>
-            Jardín Santa Cecilia. Aprendizajes a través del juego, la exploración y los primeros
+            Aprendizajes a través del juego, la exploración y los primeros
             vínculos con la comunidad.
           </p>
           <div class="school-level-contact" aria-label="Datos de contacto de Nivel Inicial">
@@ -65,7 +73,7 @@
         <article>
           <img class="school-level-icon" src="assets/iconos/primaria.png" alt="" aria-hidden="true" />
           <small>NIVEL PRIMARIO</small>
-          <h3>Bases para crecer</h3>
+          <h3>Escuela Brig. Gral. M. Rodríguez</h3>
           <p>
             Herramientas fundamentales para aprender con autonomía, curiosidad
             y confianza.
@@ -79,17 +87,24 @@
         <article>
           <img class="school-level-icon" src="assets/iconos/secundaria.png" alt="" aria-hidden="true" />
           <small>NIVEL SECUNDARIO</small>
-          <h3>Construir el futuro</h3>
+          <h3>Instituto Brig. Gral. M. Rodríguez</h3>
           <p>
             Formación académica y humana para desarrollar el propio proyecto de
             vida.
           </p>
           <div class="school-level-contact" aria-label="Datos de contacto de Nivel Secundario">
             <span><img class="school-level-contact-icon" src="assets/iconos/whatsapp.svg" alt="" aria-hidden="true" />(0249) 000-1003</span>
-            <span><i aria-hidden="true">⌖</i>Av. Marconi 1760 - Tandil</span>
+            <span><i aria-hidden="true">⌖</i>Av. Balbin 910 - Tandil</span>
             <span><i aria-hidden="true">✉</i>secundaria&#64;colegio.edu.ar</span>
           </div>
         </article>
+      </div>
+      <div class="school-levels-contact">
+        <h2>¿Quiere conocer más?</h2>
+        <p>
+          Comuníquese con nosotros por consultas, inscripciones o
+          coordinar una entrevista.
+        </p>
       </div>
     </div>
   </section>
@@ -117,46 +132,17 @@
     </div>
   </section>
 
-  <section class="section school-detail-contact">
-    <div class="shell">
-      <p class="eyebrow">CONTACTO</p>
-      <h2>¿Querés conocer más?</h2>
-      <p>
-        Comunicate con nosotros para consultar por inscripciones, niveles o
-        coordinar una entrevista.
-      </p>
-      <div class="parish-contact-grid">
-        <article class="contact-address">
-          <span aria-hidden="true">⌖</span>
-          <small>DIRECCIÓN</small>
-          Av. Marconi 1760 - Tandil - Bs. As.
-        </article>
-        <article>
-          <span aria-hidden="true"><img class="whatsapp-icon" src="assets/iconos/whatsapp.svg" alt="" /></span>
-          <small>TELÉFONO</small>
-          <strong>(0249) 000-0000</strong>
-        </article>
-        <article>
-          <span aria-hidden="true">✉</span>
-          <small>CORREO ELECTRÓNICO</small>
-          <strong>martinrodriguez&#64;colegio.edu.ar</strong>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <section class="section school-location">
     <div class="shell">
       <p class="eyebrow">UBICACIÓN</p>
-      <h2>Cómo llegar</h2>
+      <h2>Nuestras sedes</h2>
       <div class="school-location-map">
-        <iframe
-          title="Ubicación de la Unidad Académica Brigadier General Martín Rodríguez"
-          src="https://www.google.com/maps?q=Av.%20Marconi%201760%2C%20Tandil%2C%20Buenos%20Aires&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen
-        ></iframe>
+        <div
+          #campusMap
+          class="leaflet-map"
+          role="region"
+          aria-label="Mapa con las tres sedes de la Unidad Académica Brigadier General Martín Rodríguez"
+        ></div>
       </div>
     </div>
   </section>

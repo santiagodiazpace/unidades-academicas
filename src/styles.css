@@ -1,8 +1,10 @@
 :root{--ink:#172d28;--green:#315e52;--deep:#1d4038;--cream:#f7f4ed;--gold:#d5aa5c;--blue:#35566b;--line:#dce0dc}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:'DM Sans',Arial,sans-serif}a{color:inherit}.shell{width:min(1160px,calc(100% - 48px));margin:auto}
-.school.blue .photo{background:url("assets/images/unid-begonia.png") center/cover no-repeat}
+.school.blue .photo{background:url("assets/images/begonia_3.png") center/cover no-repeat}
 .school.blue .photo>small{display:none}
-.school.green .photo{background:url("assets/images/unid-rodriguez.png") center/cover no-repeat}
+.school.green .photo{background:url("assets/images/instituto_1.png") center/cover no-repeat}
 .school.green .photo>small{display:none}
+.school-photo-logos{position:absolute;bottom:22px;left:50%;display:flex;flex-wrap:nowrap;align-items:center;justify-content:center;gap:8px;transform:translateX(-50%)}
+.school-photo-logos img{display:block;width:58px;height:58px;object-fit:contain}
 .identity .identity-img{background:url("assets/images/comunidad.png") center/cover no-repeat}
 .identity .identity-img>small{display:none}
 .news .news-card-image{display:block;width:100%;height:100%;object-fit:cover}
@@ -105,8 +107,10 @@ app-families + .back-to-top{background:#fff}
 .begonia-hero{background-image:url("assets/images/begonia.png");background-position:center}
 .families-photo-hero{background-image:url("assets/images/familia.png");background-position:center}
 .martin-hero-copy-text>p:last-child{max-width:590px;font-size:17px;line-height:1.7;color:#dce9e4}
-.martin-hero-logo{position:absolute;z-index:1;top:50%;right:max(48px,calc((100vw - 1160px)/2 - 30px));display:grid;place-items:center;width:190px;height:190px;padding:30px;background:#fffffff2;border-radius:50%;box-shadow:0 0 0 14px #1d40382e,0 14px 36px #0b241e70;transform:translateY(-50%)}
+.martin-hero-logos{position:absolute;z-index:1;top:50%;right:clamp(48px,5vw,80px);display:flex;align-items:center;gap:clamp(12px,1.5vw,24px);transform:translateY(-50%)}
+.martin-hero-logo{display:grid;overflow:hidden;place-items:center;width:clamp(120px,11vw,190px);height:clamp(120px,11vw,190px);padding:clamp(18px,1.75vw,30px);background:#fffffff2;border-radius:50%;box-shadow:0 0 0 10px #1d40382e,0 14px 36px #0b241e70}
 .martin-hero-logo img{display:block;width:100%;height:100%;object-fit:contain}
+.martin-hero-logo:last-child img{width:88%;height:88%}
 .parish-shade{position:absolute;inset:0;background:linear-gradient(90deg,#142f29e8 0%,#173b32a8 48%,#173b3224 78%)}
 .parish-hero-copy{position:relative;padding-top:24px}
 .parish-back{display:inline-flex;margin-bottom:74px;color:#e8f1ed;font-size:11px;font-weight:700;letter-spacing:.1em;text-decoration:none;transition:transform .2s ease,color .2s ease}
@@ -149,7 +153,7 @@ app-families + .back-to-top{background:#fff}
 .parish-contact-grid strong,.parish-contact-grid a{font-size:13px;color:var(--ink);text-decoration:none}
 .parish-contact-grid a{transition:color .2s ease}
 .parish-contact-grid a:hover{color:#a77729}
-@media(max-width:800px){.parish-hero{height:560px}.parish-hero h1{font-size:48px}.martin-hero-logo{top:14px;right:28px;width:72px;height:72px;padding:11px;box-shadow:0 0 0 6px #1d40382e,0 8px 20px #0b241e66;transform:none}.parish-intro-grid,.parish-schedule-grid{grid-template-columns:1fr;gap:42px}.parish-card-grid{grid-template-columns:1fr}.parish-card-grid article{border-right:0;border-bottom:1px solid #ffffff2b}.parish-card-grid article:last-child{border-bottom:0}}
+@media(max-width:800px){.parish-hero{height:560px}.parish-hero h1{font-size:48px}.martin-hero-logos{top:14px;right:28px;gap:8px;transform:none}.martin-hero-logo{width:72px;height:72px;padding:11px;box-shadow:0 0 0 4px #1d40382e,0 8px 20px #0b241e66}.parish-intro-grid,.parish-schedule-grid{grid-template-columns:1fr;gap:42px}.parish-card-grid{grid-template-columns:1fr}.parish-card-grid article{border-right:0;border-bottom:1px solid #ffffff2b}.parish-card-grid article:last-child{border-bottom:0}}
 @media(max-width:800px){.home-hero-logos{bottom:calc(100% - 2px);gap:20px}.home-hero-logos span{width:auto;height:80px}}
 @media(max-width:700px){.parish-contact-grid{grid-template-columns:1fr}.parish-contact-grid article{border-right:0;border-bottom:1px solid var(--line)}.parish-contact-grid article:last-child{border-bottom:0}}
 @media(max-width:600px){.parish-hero{height:520px}.parish-hero h1{font-size:40px}.parish-back{margin-bottom:48px}.parish-intro h2,.parish-section-heading h2,.parish-schedule h2,.parish-contact h2{font-size:36px}}
@@ -190,6 +194,9 @@ app-families + .back-to-top{background:#fff}
 .school-level-contact-icon{width:14px;height:14px;flex:0 0 14px;object-fit:contain}
 .school-levels-action{display:flex;justify-content:center;margin-top:38px}
 .school-levels-action .text-link{color:#fff;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.school-levels-contact{margin-top:44px;text-align:center}
+.school-levels-contact h2{margin:0 0 16px;color:#fff;font:400 44px/1.1 Georgia,serif}
+.school-levels-contact p{max-width:620px;margin:0 auto;color:#bdcdc7;font-size:14px;line-height:1.7}
 #comunidad-educativa{scroll-margin-top:130px}
 .school-pillars{background:var(--cream)}
 .school-pillars-grid{display:grid;grid-template-columns:.8fr 1fr;gap:100px}
@@ -202,11 +209,18 @@ app-families + .back-to-top{background:#fff}
 .school-detail-contact .eyebrow:before{display:none}
 .school-detail-contact h2{max-width:700px;margin:0 auto 18px}
 .school-detail-contact>div>p:not(.eyebrow){max-width:620px;margin:0 auto 30px;font-size:14px;line-height:1.7;color:#65736e}
-.section.school-location{padding-top:0;text-align:center}
+.section.school-location{padding-top:48px;text-align:center}
 .school-location .eyebrow:before{display:none}
 .school-location h2{font:400 44px/1.1 Georgia,serif;margin:0 0 30px}
 .school-location-map{max-width:980px;margin:0 auto;overflow:hidden;border:1px solid var(--line);background:var(--cream)}
 .school-location-map iframe{display:block;width:100%;height:370px;border:0}
+.school-location-map .leaflet-map{width:100%;height:370px;text-align:left}
+.school-map-marker{background:transparent;border:0}
+.school-map-pin{position:relative;display:block;width:26px;height:26px;border:3px solid #fff;border-radius:50% 50% 50% 0;background:#d7262e;box-shadow:0 2px 7px #0006;transform:rotate(-45deg)}
+.school-map-pin:after{content:'';position:absolute;top:6px;left:6px;width:8px;height:8px;border-radius:50%;background:#fff}
+.leaflet-popup-content{font:13px/1.5 'DM Sans',Arial,sans-serif}
+.leaflet-popup-content strong{color:var(--ink)}
+.leaflet-popup-content a{color:#b21f26;font-weight:700}
 .school-contact-data{display:grid;grid-template-columns:repeat(3,1fr);max-width:940px;margin:0 auto 32px;border:1px solid var(--line);text-align:left}
 .school-contact-data>span{display:flex;flex-direction:column;gap:7px;padding:24px 28px;border-right:1px solid var(--line)}
 .school-contact-data>span:last-child{border-right:0}
@@ -217,7 +231,8 @@ app-families + .back-to-top{background:#fff}
 .parish-contact-grid .contact-address,.school-contact-data .contact-address{font-size:13px;font-weight:400}
 @media(min-width:701px){.parish-contact-grid .contact-address{white-space:nowrap}}
 @media(max-width:800px){.school-detail-hero-grid{grid-template-columns:1fr}.school-detail-emblem{display:none}.school-detail-hero h1{font-size:48px}.school-about-grid,.school-pillars-grid{grid-template-columns:1fr;gap:42px}.school-level-card-grid{grid-template-columns:1fr}.school-level-card-grid article{border-right:0;border-bottom:1px solid #ffffff2c}.school-level-card-grid article:last-child{border-bottom:0}.school-contact-data{grid-template-columns:1fr}.school-contact-data>span{border-right:0;border-bottom:1px solid var(--line)}.school-contact-data>span:last-child{border-bottom:0}}
-@media(max-width:600px){.school-detail-hero{min-height:480px}.school-detail-hero h1{font-size:40px}.school-back{margin-bottom:48px}.school-about h2,.school-section-heading h2,.school-pillars h2,.school-detail-contact h2,.school-location h2{font-size:36px}.school-detail-contact{padding-bottom:32px}.school-location-map iframe{height:300px}}
+@media(max-width:600px){.school-detail-hero{min-height:480px}.school-detail-hero h1{font-size:40px}.school-back{margin-bottom:48px}.school-about h2,.school-section-heading h2,.school-pillars h2,.school-detail-contact h2,.school-location h2{font-size:36px}.school-detail-contact{padding-bottom:32px}.school-location-map iframe,.school-location-map .leaflet-map{height:300px}}
+@media(max-width:600px){.school-levels-contact h2{font-size:36px}}
 
 .begonia-page .school-detail-hero{background:#527b92}
 .begonia-emblem{position:absolute;top:50%;right:max(48px,calc((100vw - 1160px)/2));background:#ffffffed;border-color:#fff;box-shadow:0 0 0 18px #ffffff12;transform:translateY(-50%)}
