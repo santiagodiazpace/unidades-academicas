@@ -177,7 +177,7 @@ app-families + .back-to-top{background:#fff}
 .school-section-heading h2{color:#fff;margin-bottom:16px}
 .school-section-heading>p:last-child{font-size:14px;line-height:1.7;color:#bdcdc7}
 .school-level-card-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #ffffff2c}
-.school-level-card-grid article{min-height:280px;padding:34px;border-right:1px solid #ffffff2c;transition:background-color .22s ease,transform .22s ease}
+.school-level-card-grid article{position:relative;min-height:280px;padding:34px;border-right:1px solid #ffffff2c;transition:background-color .22s ease,transform .22s ease}
 .school-level-card-grid article:last-child{border-right:0}
 .school-level-card-grid article:hover{background:#ffffff0a;transform:translateY(-3px)}
 .school-level-card-grid article>span{display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--gold);border-radius:50%;color:var(--gold);margin-bottom:34px}
@@ -192,6 +192,14 @@ app-families + .back-to-top{background:#fff}
 .school-level-contact a:hover{color:var(--gold)}
 .school-level-contact a>span,.school-level-contact i{width:14px;flex:0 0 14px;color:var(--gold);font-style:normal;text-align:center}
 .school-level-contact-icon{width:14px;height:14px;flex:0 0 14px;object-fit:contain}
+.martin-page .school-level-contact{padding-right:64px}
+.begonia-page .school-level-contact{position:relative;padding-right:64px}
+.begonia-page .school-level-contact>.school-gallery{position:absolute;right:0;bottom:-15px;display:block;width:48px;height:48px;margin:0;border:0;border-radius:0}
+.school-level-card-grid article>.school-gallery{position:absolute;right:34px;bottom:20px;display:block;width:48px;height:48px;margin:0;border:0;border-radius:0}
+.school-gallery-icon{display:block;width:48px;height:48px;object-fit:contain;transition:transform .2s ease}
+.school-gallery-label{position:absolute;right:50%;bottom:calc(100% + 8px);padding:6px 9px;border-radius:3px;background:#fff;color:var(--ink);box-shadow:0 5px 14px #0b241e66;font-size:11px;font-weight:700;line-height:1;opacity:0;pointer-events:none;white-space:nowrap;transform:translate(50%,4px);transition:opacity .2s ease,transform .2s ease}
+.school-gallery:hover .school-gallery-icon{transform:scale(1.15)}
+.school-gallery:hover .school-gallery-label{opacity:1;transform:translate(50%,0)}
 .school-levels-action{display:flex;justify-content:center;margin-top:38px}
 .school-levels-action .text-link{color:#fff;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
 .school-levels-contact{margin-top:44px;text-align:center}
@@ -237,9 +245,11 @@ app-families + .back-to-top{background:#fff}
 .begonia-page .school-detail-hero{background:#527b92}
 .begonia-emblem{position:absolute;top:50%;right:max(48px,calc((100vw - 1160px)/2));background:#ffffffed;border-color:#fff;box-shadow:0 0 0 18px #ffffff12;transform:translateY(-50%)}
 .begonia-emblem img{width:112px;height:112px;object-fit:contain}
-.begonia-level-grid{grid-template-columns:repeat(4,1fr)}
-@media(max-width:950px){.begonia-level-grid{grid-template-columns:repeat(2,1fr)}.begonia-level-grid article:nth-child(2){border-right:0}.begonia-level-grid article:nth-child(-n+2){border-bottom:1px solid #ffffff2c}}
-@media(max-width:800px){.begonia-emblem{display:grid;top:14px;right:28px;width:72px;height:72px;box-shadow:0 0 0 6px #ffffff1f,0 8px 20px #243d4866;transform:none}.begonia-emblem img{width:48px;height:48px}}
+.begonia-level-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1080px;margin-inline:auto}
+.begonia-page .begonia-level-grid article{min-height:380px}
+.begonia-level-grid article:nth-child(even){border-right:0}
+.begonia-level-grid article:nth-child(-n+2){border-bottom:1px solid #ffffff2c}
+@media(max-width:800px){.begonia-emblem{display:grid;top:14px;right:28px;width:72px;height:72px;box-shadow:0 0 0 6px #ffffff1f,0 8px 20px #243d4866;transform:none}.begonia-emblem img{width:48px;height:48px}.begonia-level-grid{grid-template-columns:1fr}.begonia-level-grid article,.begonia-level-grid article:nth-child(2){border-right:0;border-bottom:1px solid #ffffff2c}.begonia-level-grid article:last-child{border-bottom:0}}
 @media(max-width:600px){.begonia-level-grid{grid-template-columns:1fr}.begonia-level-grid article:nth-child(2){border-right:0}.begonia-level-grid article{border-right:0;border-bottom:1px solid #ffffff2c}.begonia-level-grid article:last-child{border-bottom:0}}
 
 .families-page{background:#fff}

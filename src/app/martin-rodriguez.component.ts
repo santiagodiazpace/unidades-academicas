@@ -40,12 +40,12 @@ export class MartinRodriguezComponent implements AfterViewInit, OnDestroy {
         coordinates: [-37.3151257, -59.1216158],
       },
       {
-        name: 'Instituto Brig. Gral. M. Rodríguez',
+        name: 'Instituto Brig. Gral. Martín Rodríguez',
         address: 'Av. Balbín 910',
         coordinates: [-37.3158111, -59.1211903],
       },
       {
-        name: 'Escuela Brig. Gral. M. Rodríguez',
+        name: 'Escuela Brig. Gral. Martín Rodríguez',
         address: 'Av. Marconi 1760',
         coordinates: [-37.3161931, -59.1216627],
       },
