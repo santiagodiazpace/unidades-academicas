@@ -32,6 +32,15 @@ app-martin-rodriguez + .back-to-top{background:#fff}
 .home-contact-icon img{display:block;width:30px;height:30px}
 .home-contact-links strong{overflow-wrap:anywhere;font:400 20px/1.35 Georgia,serif}
 @media(max-width:600px){.home-contact-grid{grid-template-columns:1fr;gap:42px}.home-contact h2{font-size:38px}.home-contact-links a{grid-template-columns:36px 1fr;gap:8px}.home-contact-icon{grid-column:1}}
+.not-found-page{background:var(--cream)}
+.not-found-section{display:grid;min-height:calc(100vh - 109px);place-items:center;padding:90px 0;text-align:center}
+.not-found-content{display:flex;max-width:760px;align-items:center;flex-direction:column}
+.not-found-code{margin:0 0 34px;color:var(--gold);font:400 clamp(100px,17vw,190px)/.78 Georgia,serif;letter-spacing:-.07em}
+.not-found-content .eyebrow{margin-bottom:20px}
+.not-found-content .eyebrow:before{display:none}
+.not-found-content h1{max-width:650px;margin:0;color:var(--ink);font:400 clamp(36px,4.6vw,56px)/1.08 Georgia,serif;letter-spacing:-.035em}
+.not-found-message{max-width:580px;margin:24px auto 34px;color:#687670;font-size:15px;line-height:1.7}
+@media(max-width:600px){.not-found-section{min-height:calc(100vh - 99px);padding:70px 0}.not-found-code{margin-bottom:28px;font-size:110px}.not-found-content h1{font-size:36px}.not-found-message{font-size:14px}}
 
 .institutional-detail{background:#fff;scroll-margin-top:108px;border-top:1px solid var(--line)}
 .detail-page{background:#fff}

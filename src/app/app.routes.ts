@@ -7,6 +7,7 @@ import { ParishComponent } from './parish.component';
 import { MartinRodriguezComponent } from './martin-rodriguez.component';
 import { BegoniaComponent } from './begonia.component';
 import { FamiliesComponent } from './families.component';
+import { NotFoundComponent } from './not-found.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'Unidades Académicas Tandil' },
@@ -45,5 +46,9 @@ export const routes: Routes = [
     component: FamiliesComponent,
     title: 'Familias | Unidades Académicas Tandil',
   },
-  { path: '**', redirectTo: '' },
+  {
+    path: '**',
+    component: NotFoundComponent,
+    title: 'Página no encontrada | Unidades Académicas Tandil',
+  },
 ];
