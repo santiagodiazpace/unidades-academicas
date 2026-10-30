@@ -615,8 +615,8 @@ nav button {
   color: var(--ink);
 }
 .events {
-  background: #294f45;
-  color: #fff;
+  background: var(--cream);
+  color: var(--ink);
   padding: 77px 0;
 }
 .events > .shell {
@@ -631,14 +631,11 @@ nav button {
 }
 .events article {
   display: grid;
-  grid-template-columns: 65px 1fr auto;
+  grid-template-columns: 65px 1fr;
   gap: 23px;
   align-items: center;
   padding: 20px 10px;
-  border-top: 1px solid #fff3;
-}
-.events article:last-child {
-  border-bottom: 1px solid #fff3;
+  border-top: 1px solid var(--line);
 }
 .events time {
   display: flex;
@@ -648,7 +645,7 @@ nav button {
 }
 .events time b {
   font: 34px Georgia;
-  color: #fff;
+  color: var(--ink);
 }
 .events article small {
   color: #d8b973;
@@ -661,12 +658,8 @@ nav button {
 }
 .events article p {
   font-size: 11px;
-  color: #b8cac4;
+  color: #74807b;
   margin: 0;
-}
-.events article > a {
-  color: var(--gold);
-  text-decoration: none;
 }
 .contacts {
   display: grid;
