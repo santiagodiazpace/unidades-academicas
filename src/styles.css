@@ -151,7 +151,9 @@ app-martin-rodriguez + .back-to-top{background:#fff}
 .parish-card-grid article{min-height:285px;padding:34px;border-right:1px solid #ffffff2b;transition:background-color .22s ease,transform .22s ease}
 .parish-card-grid article:last-child{border-right:0}
 .parish-card-grid article:hover{background:#ffffff0a;transform:translateY(-3px)}
-.parish-card-grid article>span{display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--gold);border-radius:50%;color:var(--gold);margin-bottom:34px}
+.parish-card-grid article>span{display:flex;width:max-content;height:60px;align-items:flex-end;margin-bottom:28px}
+.parish-card-grid article>span img{display:block;width:auto;height:60px}
+.parish-card-grid article:nth-child(2)>span img{height:45px}
 .parish-card-grid small{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--gold)}
 .parish-card-grid h3{font:400 25px/1.2 Georgia,serif;margin:10px 0 14px}
 .parish-card-grid p{font-size:14px;line-height:1.7;color:#bfd0ca;margin:0}
