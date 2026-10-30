@@ -4,7 +4,6 @@
       <a class="back-link" routerLink="/" fragment="noticias">← VOLVER</a>
 
       <div class="news-archive-heading">
-        <p class="eyebrow">ACTUALIDAD</p>
         <h1>Todas las noticias</h1>
         <p>
           Experiencias, proyectos y novedades de nuestras comunidades
@@ -23,10 +22,12 @@
               }
             </div>
             <div class="news-archive-copy">
-              <small>{{ item.category }} <time>{{ item.date }}</time></small>
+              <div class="news-archive-meta">
+                <time>{{ item.date }}</time>
+                <small>{{ item.category }}</small>
+              </div>
               <h2>{{ item.title }}</h2>
               <p>{{ item.summary }}</p>
-              <a class="text-link keep-color" routerLink="/">LEER MÁS</a>
             </div>
           </article>
         }

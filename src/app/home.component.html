@@ -31,7 +31,7 @@
           educativo.
         </p>
       </div>
-      <a class="btn outline hero-action" routerLink="/familias">VER INSCRIPCIONES</a>
+      <a class="btn outline hero-action" routerLink="/familias">IR A INSCRIPCIONES</a>
     </div>
   </section>
   <section class="section" id="colegios">
@@ -200,7 +200,7 @@
           <p class="eyebrow">ACTUALIDAD</p>
           <h2>Noticias de nuestra comunidad</h2>
         </div>
-        <a class="under text-link keep-color" routerLink="/noticias">VER TODAS LAS NOTICIAS</a>
+        <a class="under text-link keep-color" routerLink="/noticias">IR A NOTICIAS</a>
       </div>
       <div class="news">
         @for (item of news; track item[2]; let i = $index) {
@@ -213,15 +213,15 @@
               />
             </div>
             <section>
-              <small
-                >{{ item[0] }} <time>{{ item[1] }}</time></small
-              >
+              <small>
+                <time>{{ item[1] }}</time>
+                <span>{{ item[0] }}</span>
+              </small>
               <h3>{{ item[2] }}</h3>
               <p>
                 Compartimos una nueva experiencia junto a estudiantes, docentes
                 y familias de nuestra comunidad.
               </p>
-              <a class="text-link keep-color" href="#contacto">LEER MÁS</a>
             </section>
           </article>
         }

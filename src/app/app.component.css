@@ -589,12 +589,13 @@ nav button {
   padding: 22px;
 }
 .news section > small {
+  display: grid;
+  gap: 5px;
   font-size: 10px;
   color: var(--green);
   font-weight: bold;
 }
 .news time {
-  float: right;
   color: #7f8a85;
 }
 .news h3 {
