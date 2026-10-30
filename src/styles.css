@@ -11,6 +11,9 @@
 .contacts .contact-logo{display:block;width:58px;height:58px;object-fit:contain}
 .back-to-top{background:var(--cream);padding:0 0 32px}
 app-families + .back-to-top{background:#fff}
+app-institutional + .back-to-top{background:#fff}
+app-begonia + .back-to-top,
+app-martin-rodriguez + .back-to-top{background:#fff}
 .back-to-top .shell{display:flex;justify-content:flex-end}
 .back-to-top a{display:inline-flex;align-items:center;gap:8px;padding:8px 0}
 .back-to-top a::after{content:none}
@@ -234,7 +237,7 @@ app-families + .back-to-top{background:#fff}
 .section.school-location{padding-top:48px;text-align:center}
 .school-location .eyebrow:before{display:none}
 .school-location h2{font:400 44px/1.1 Georgia,serif;margin:0 0 30px}
-.school-location-map{max-width:980px;margin:0 auto;overflow:hidden;border:1px solid var(--line);background:var(--cream)}
+.school-location-map{position:relative;z-index:0;max-width:980px;margin:0 auto;overflow:hidden;border:1px solid var(--line);background:var(--cream)}
 .school-location-map iframe{display:block;width:100%;height:370px;border:0}
 .school-location-map .leaflet-map{width:100%;height:370px;text-align:left}
 .school-map-marker{background:transparent;border:0}
